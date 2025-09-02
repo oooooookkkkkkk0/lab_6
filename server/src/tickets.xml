@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tickets>
+    <ticket>
+        <id>1</id>
+        <name>Иван Петров</name>
+        <coordinates>
+            <x>10.5</x>
+            <y>100.0</y>
+        </coordinates>
+        <creationDate>2024-01-15T00:00:00+03:00[Europe/Moscow]</creationDate>
+        <price>450</price>
+        <refundable>true</refundable>
+        <type>VIP</type>
+        <venue>
+            <id>1</id>
+            <name>Концертный зал</name>
+            <capacity>1000</capacity>
+            <type>THEATRE</type>
+        </venue>
+    </ticket>
+    <ticket>
+        <id>2</id>
+        <name>Мария Сидорова</name>
+        <coordinates>
+            <x>15.7</x>
+            <y>150.0</y>
+        </coordinates>
+        <creationDate>2024-01-16T00:00:00+03:00[Europe/Moscow]</creationDate>
+        <price>350</price>
+        <refundable>false</refundable>
+        <type>USUAL</type>
+        <venue>
+            <id>2</id>
+            <name>Спортивный комплекс</name>
+            <capacity>5000</capacity>
+            <type>STADIUM</type>
+        </venue>
+    </ticket>
+    <ticket>
+        <id>3</id>
+        <name>Алексей Иванов</name>
+        <coordinates>
+            <x>20.3</x>
+            <y>200.0</y>
+        </coordinates>
+        <creationDate>2024-01-17T00:00:00+03:00[Europe/Moscow]</creationDate>
+        <price>200</price>
+        <refundable>true</refundable>
+        <type>BUDGETARY</type>
+        <venue>
+            <id>3</id>
+            <name>Торговый центр</name>
+            <capacity>2000</capacity>
+            <type>MALL</type>
+        </venue>
+    </ticket>
+    <ticket>
+        <id>4</id>
+        <name>Елена Смирнова</name>
+        <coordinates>
+            <x>25.1</x>
+            <y>250.0</y>
+        </coordinates>
+        <creationDate>2024-01-18T00:00:00+03:00[Europe/Moscow]</creationDate>
+        <price>150</price>
+        <refundable>false</refundable>
+        <type>CHEAP</type>
+        <venue>
+            <id>4</id>
+            <name>Бар</name>
+            <capacity>100</capacity>
+            <type>BAR</type>
+        </venue>
+    </ticket>
+    <ticket>
+        <id>5</id>
+        <name>Анна Попова</name>
+        <coordinates>
+            <x>35.4</x>
+            <y>350.0</y>
+        </coordinates>
+        <creationDate>2024-01-20T00:00:00+03:00[Europe/Moscow]</creationDate>
+        <price>500</price>
+        <refundable>true</refundable>
+        <type>VIP</type>
+        <venue>
+            <id>5</id>
+            <name>Лофт-пространство</name>
+            <capacity>300</capacity>
+            <type>LOFT</type>
+        </venue>
+    </ticket>
+</tickets>

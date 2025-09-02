@@ -1,0 +1,6 @@
+2025-06-08 13:25:13.232 [main] INFO  network.TCPServer - Сервер запущен на порту 5555
+2025-06-08 13:25:13.237 [Thread-0] INFO  network.TCPServer - Доступен интерактивный режим админа
+2025-06-08 13:25:20.628 [main] INFO  network.TCPServer - Подключение от клиента №1
+2025-06-08 13:25:49.394 [Thread-1] INFO  network.TCPServer - Получен запрос: (type = INITIAL_COMMAND, commandName = add, arguments = [], worker = null)
+2025-06-08 13:25:49.395 [Thread-1] INFO  network.TCPServer - Запрос на выполнение команды: add - добавить новый элемент в коллекцию;
+2025-06-08 13:25:49.402 [Thread-1] INFO  network.TCPServer - Сформирован ответ клиенту: (type = NEED_TICKET, success = false, message = Требуется ввести данные о биле...)
