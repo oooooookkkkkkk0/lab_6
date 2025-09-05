@@ -76,6 +76,11 @@ public class TicketInputHelper {
                 continue;
             }
 
+            if (name.length() > 100) {
+                System.out.println("Ошибка: имя клиента не может быть таким длинным.");
+                continue;
+            }
+
             if (name.matches("\\d+")) {
                 System.out.println("Ошибка: название не может состоять из цифр.");
                 continue;

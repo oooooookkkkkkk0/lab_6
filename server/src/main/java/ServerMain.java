@@ -17,7 +17,7 @@ public class ServerMain {
      * @param args аргументы командной строки, где args[0] - путь к файлу с коллекцией
      */
     public static void main(String[] args) {
-        String filePath = args[0];
+        String filePath = System.getenv("COLLECTION_FILE");
 
         CollectionManager collectionManager = new CollectionManager();
         CommandManager commandManager = new CommandManager();

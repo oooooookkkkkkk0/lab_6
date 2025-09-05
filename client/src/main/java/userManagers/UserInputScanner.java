@@ -8,6 +8,7 @@ import things.Response;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
@@ -124,15 +125,37 @@ public class UserInputScanner {
 
         if (commandName.equalsIgnoreCase("execute_script")) {
             String scriptPath = args[0];
-            checkRecursion(scriptPath);
-            String scriptContent = readScriptContent(scriptPath);
-            return new Request(
-                    commandName,
-                    args,
-                    scriptContent,
-                    Request.RequestType.SCRIPT_TRANSFER
-            );
+
+            try {
+                Path path = Paths.get(scriptPath);
+                if (!Files.exists(path)) {
+                    System.err.println("Ошибка: файл '" + scriptPath + "' не существует");
+                    return null;
+                }
+                if (!Files.isReadable(path)) {
+                    System.err.println("Ошибка: нет прав на чтение файла '" + scriptPath + "'");
+                    return null;
+                }
+
+                checkRecursion(scriptPath);
+                String scriptContent = readScriptContent(scriptPath);
+
+                return new Request(
+                        commandName,
+                        args,
+                        scriptContent,
+                        Request.RequestType.SCRIPT_TRANSFER
+                );
+
+            } catch (IOException e) {
+                System.out.println("Ошибка при чтении файла скрипта: " + e.getMessage());
+                return null;
+            } catch (SecurityException e) {
+                System.out.println("Ошибка безопасности при доступе к файлу: " + e.getMessage());
+                return null;
+            }
         }
+
         return new Request(commandName, args);
     }
 
@@ -158,6 +181,7 @@ public class UserInputScanner {
      */
     private String readScriptContent(String scriptPath) throws IOException {
         return new String(Files.readAllBytes(Paths.get(scriptPath)));
+        //TODO проверить длину строки
     }
 
 
