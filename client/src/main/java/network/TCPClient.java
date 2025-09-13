@@ -43,12 +43,10 @@ public class TCPClient {
      * @throws IOException если произошла ошибка при обмене данными
      */
     public Response sendRequest(Request request) throws IOException {
-        try {
-            synchronized (out) {  // Синхронизация для потокобезопасности
-                out.writeObject(request);
+        try {  // Синхронизация для потокобезопасности
+            out.writeObject(request);
                 out.flush();
                 return (Response) in.readObject();
-            }
         } catch (ClassNotFoundException e) {
             throw new IOException("Ошибка десериализации", e);
         } catch (IOException e) {

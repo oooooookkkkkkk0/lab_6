@@ -271,7 +271,7 @@ public class TCPServer {
     /**
      * Останавливает сервер и освобождает ресурсы
      */
-    public synchronized void disconnect() {
+    public void disconnect() {
         logger.info("Начало отключения сервера");
         if (!isRunning) return;
         isRunning = false;

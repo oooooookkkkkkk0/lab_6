@@ -450,3 +450,34 @@ add - добав...)
 2025-09-05 15:04:30.720 [main] INFO  network.TCPServer - Сервер запущен на порту 5555
 2025-09-05 15:04:30.726 [Thread-0] INFO  network.TCPServer - Доступен интерактивный режим админа
 2025-09-05 15:04:34.429 [main] INFO  network.TCPServer - Подключение от клиента №1
+2025-09-13 01:09:41.914 [main] INFO  network.TCPServer - Сервер запущен на порту 5555
+2025-09-13 01:09:41.914 [Thread-0] INFO  network.TCPServer - Доступен интерактивный режим админа
+2025-09-13 01:09:44.328 [main] INFO  network.TCPServer - Подключение от клиента №1
+2025-09-13 01:09:52.875 [Thread-1] INFO  network.TCPServer - Получен запрос: (type = INITIAL_COMMAND, commandName = help, arguments = [], worker = null)
+2025-09-13 01:09:52.876 [Thread-1] INFO  network.TCPServer - Запрос на выполнение команды: help - вывести справку по доступным командам;
+2025-09-13 01:09:52.883 [Thread-1] INFO  network.TCPServer - Сформирован ответ клиенту: (type = INFO, success = true, message = Доступные команды:
+add - добав...)
+2025-09-13 01:10:10.572 [Thread-1] INFO  network.TCPServer - Получен запрос: (type = INITIAL_COMMAND, commandName = execute_script, arguments = [file], worker = null)
+2025-09-13 01:10:10.572 [Thread-1] INFO  network.TCPServer - Запрос на выполнение команды: execute_script - считать и исполнить скрипт из указанного файла;
+2025-09-13 01:10:10.573 [Thread-1] INFO  network.TCPServer - Сформирован ответ клиенту: (type = NEED_TICKET, success = false, message = Требуется ввести данные о биле...)
+2025-09-13 01:12:11.790 [Thread-1] INFO  network.TCPServer - Получены данные о билете: Билет:
+  ID билета: не установлен
+  Имя владельца: sds
+  Координаты: (x, y) : (2.0, 323.0)
+  Дата создания: не указана
+  Цена билета: 3
+  Возвратный билет?: да
+  Тип билета: вип
+  Место проведения: 3r33
+  Информация о месте проведения:
+     ID места проведения: не указан
+     Название: 3r33
+     Вместимость: 43
+     Тип места проведения: бар
+
+2025-09-13 01:12:11.790 [Thread-1] INFO  network.TCPServer - Сформирован ответ клиенту: (type = null, success = true, message = )
+2025-09-13 01:12:16.140 [Thread-1] INFO  network.TCPServer - Получен запрос: (type = INITIAL_COMMAND, commandName = how, arguments = [], worker = null)
+2025-09-13 01:12:16.141 [Thread-1] WARN  network.TCPServer - Сформирован ответ клиенту: (type = ERROR, success = false, message = Введена некорректная команда!)
+2025-09-13 01:12:20.686 [Thread-1] INFO  network.TCPServer - Получен запрос: (type = INITIAL_COMMAND, commandName = execute_script, arguments = [file], worker = null)
+2025-09-13 01:12:20.687 [Thread-1] INFO  network.TCPServer - Запрос на выполнение команды: execute_script - считать и исполнить скрипт из указанного файла;
+2025-09-13 01:12:20.687 [Thread-1] INFO  network.TCPServer - Сформирован ответ клиенту: (type = NEED_TICKET, success = false, message = Требуется ввести данные о биле...)
